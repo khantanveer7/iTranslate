@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <div class="container">
+        <h1 class="text-center">ENTER HERE TO TRANSLATE</h1>
+        <form action="translate" method='post'>
+        {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter Here</label>
+                <textarea class="form-control" name="text" rows="8"  required></textarea>
+            </div>
+
+            <br />
+            <h2 class="text-center">SELECT LANGUAGE</h2>
+
+            <div class="form-group">
+                <select class="form-control" name="lang">
+                    <option>Select Language</option>
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="af">Afrikaans</option>
+                    <option value="sq">Albanian</option>
+                    <option value="am">Amharic</option>
+                    <option value="ar">Arabic</option>
+                    <option value="ar">Armenian</option>
+                    <option value="az">Azerbaijani</option>
+                    <option value="eu">Basque</option>
+                    <option value="be">Belarusian</option>
+                    <option value="bn">Bengali</option>
+                    <option value="bs">Bosnian</option>
+                    <option value="bg">Bulgarian</option>
+                    <option value="ca">Catalan</option>
+                    <option value="ceb">Cebuano</option>
+                    <option value="ny">Chichewa</option>
+                    <option value="zh-cn">Chinese (simplified)</option>
+                    <option value="zh-tw">Chinese (traditional)</option>
+                    <option value="co">Corsican</option>
+                    <option value="hr">Croatian</option>
+                    <option value="cs">Czech</option>
+                    <option value="da">Danish</option>
+                    <option value="nl">Dutch</option>
+                    <option value="eo">Esperanto</option>
+                    <option value="et">Estonian</option>
+                    <option value="tl">Filipino</option>
+                    <option value="fi">Finnish</option>
+                    <!-- <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option> -->
+                </select>
+            </div>
+        <button type="submit" class="btn btn-warning px-5 py-2">TRANSLATE</button> 
+        </form>
+    </div>
+
+    {% endblock body %}

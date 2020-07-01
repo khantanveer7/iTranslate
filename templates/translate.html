@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container text-center">
+<h1>SUCCESSFULLY TRANSLATED</h1>
+
+<textarea class="form-control" name="text" id="textarea" rows="8"  required>{{translated}}</textarea>
+
+    <br><a href="/">
+    <button type="submit" class="btn btn-warning">Back To Translator</button>
+    </a>
+    <button class="btn btn-warning" onclick="copy()">Copy To Clipboard</button>
+</div>
+
+<!--COPY TEXT AREA JS-->
+<script>
+    function copy() {
+    let textarea = document.getElementById("textarea");
+    textarea.select();
+    document.execCommand("copy");
+  }
+</script>
+
+{% endblock body %}
